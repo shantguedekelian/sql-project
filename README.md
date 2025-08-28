@@ -1,1 +1,3 @@
-# sql-project
+# Simulating AB Testing using SQL
+
+## got dataframes, put them into SQL database and then wrote queries. After getting the final table which looks like this ___ , I saved it as a csv file and loaded it up in python to run a hypothesis test to determine if the difference in conversion rate was just due to chance. The results showed that ___ , indicating that version A and version B didn't differ in performance.
