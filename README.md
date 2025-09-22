@@ -42,5 +42,5 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
 
 ## Key Insights
 
-## Takeaways
+## Takeaway
 
