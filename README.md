@@ -31,3 +31,16 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
    ```sql
    SELECT * FROM page_views LIMIT 5;
    SELECT * FROM purchases LIMIT 5;
+
+## Queries
+
+## Export Results
+
+## Hypothesis Testing in Python
+
+## Visualiztion
+
+## Key Insights
+
+## Takeaways
+
