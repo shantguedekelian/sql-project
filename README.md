@@ -68,6 +68,20 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
     GROUP BY g.page_version;
     ```
 
+### Output
+
+In the output we have:
+
+- the page_version (A or B)
+- 
+- total_users in each group
+- 
+- converted_users (those who made a purchase)
+- 
+- conversion_rate (converted / total)
+
+___ insert photo of the dataframe outputted
+
 ## Export Results
 
 ## Hypothesis Testing in Python
