@@ -79,6 +79,8 @@ ___ insert photo of the dataframe outputted
 - Exported query results as CSV from DB Browser.
 - *Example file: ab_test_results.csv*
 
+|    | page_version   |   total_users |   converted_users |   conversion_rate |\n|---:|:---------------|--------------:|------------------:|------------------:|\n|  0 | A              |           494 |               156 |            0.3158 |\n|  1 | B              |           506 |               157 |            0.3103 |
+
 ## Hypothesis Testing in Python
 
 Performed a **two-proportion z-test** to determine if the observed difference was statistically significant.
