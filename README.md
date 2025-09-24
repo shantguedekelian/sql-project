@@ -36,16 +36,38 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
 
 1. Assign Users to A/B Groups:
     ```sql
-        WITH ab_groups AS (
-        SELECT user_id, page_version
-        FROM page_views
-        WHERE view_timestamp = (
-            SELECT MIN(view_timestamp)
-            FROM page_views AS pv2
-            WHERE pv2.user_id = page_views.user_id
+    WITH ab_groups AS (
+    SELECT user_id, page_version
+    FROM page_views
+    WHERE view_timestamp = (
+        SELECT MIN(view_timestamp)
+        FROM page_views AS pv2
+        WHERE pv2.user_id = page_views.user_id
         )
     )
     ```
+
+2. Count Conversions:
+    ```sql
+    conversions AS (
+    SELECT user_id, COUNT(*) AS num_purchases
+    FROM purchases
+    GROUP BY user_id
+    )
+    ```
+
+3. Compute Conversion Rates:
+    ```sql
+    SELECT 
+        g.page_version,
+        COUNT(DISTINCT g.user_id) AS total_users,
+        COUNT(DISTINCT c.user_id) AS converted_users,
+        ROUND(COUNT(DISTINCT c.user_id) * 1.0 / COUNT(DISTINCT g.user_id), 4) AS conversion_rate
+    FROM ab_groups g
+    LEFT JOIN conversions c ON g.user_id = c.user_id
+    GROUP BY g.page_version;
+    ```
+
 ## Export Results
 
 ## Hypothesis Testing in Python
