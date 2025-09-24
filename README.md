@@ -72,12 +72,10 @@ In the output we have:
 - converted_users (those who made a purchase)
 - conversion_rate (converted / total)
 
-___ insert photo of the dataframe outputted
-
 ## Export Results
 
 - Exported query results as CSV from DB Browser.
-- *Example file: ab_test_results.csv*
+- Below is the resulting dataframing
 
 |    | page_version   |   total_users |   converted_users |   conversion_rate |
 |---:|:---------------|--------------:|------------------:|------------------:|
@@ -125,15 +123,14 @@ plt.bar(labels, conversion_rates, color=['skyblue', 'orange'])
 plt.title("Conversion Rates by Group")
 plt.ylabel("Conversion Rate")
 plt.show()
-
 ```
 
 ## Key Insights
 
-- Group A conversion rate: X%
-- Group B conversion rate: Y%
-- P-value: 0.0XX (significant / not significant)
-- Interpretation: Version B improved conversion by Z percentage points compared to A
+- Group A conversion rate: 0.316%
+- Group B conversion rate: 0.310%
+- P-value: 0.85 (not significant)
+- Interpretation: The results show that there is no significant difference in conversion rates between version A and B.
 
 ## Takeaway
 
