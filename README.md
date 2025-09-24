@@ -79,7 +79,10 @@ ___ insert photo of the dataframe outputted
 - Exported query results as CSV from DB Browser.
 - *Example file: ab_test_results.csv*
 
-|    | page_version   |   total_users |   converted_users |   conversion_rate |\n|---:|:---------------|--------------:|------------------:|------------------:|\n|  0 | A              |           494 |               156 |            0.3158 |\n|  1 | B              |           506 |               157 |            0.3103 |
+|    | page_version   |   total_users |   converted_users |   conversion_rate |
+|---:|:---------------|--------------:|------------------:|------------------:|
+|  0 | A              |           494 |               156 |            0.3158 |
+|  1 | B              |           506 |               157 |            0.3103 |
 
 ## Hypothesis Testing in Python
 
@@ -89,9 +92,9 @@ Performed a **two-proportion z-test** to determine if the observed difference wa
 import pandas as pd
 from statsmodels.stats.proportion import proportions_ztest
 
-# Example results (replace with exported values)
-n_A, x_A = 1000, 120   # Group A
-n_B, x_B = 980, 150    # Group B
+# Total users, and converted users
+n_A, x_A = 494, 156   # Group A
+n_B, x_B = 500, 157    # Group B
 
 # Successes and trials
 successes = [x_A, x_B]
