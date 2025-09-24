@@ -37,12 +37,12 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
 1. Assign Users to A/B Groups:
     ```sql
     WITH ab_groups AS (
-    SELECT user_id, page_version
-    FROM page_views
-    WHERE view_timestamp = (
-        SELECT MIN(view_timestamp)
-        FROM page_views AS pv2
-        WHERE pv2.user_id = page_views.user_id
+        SELECT user_id, page_version
+        FROM page_views
+        WHERE view_timestamp = (
+            SELECT MIN(view_timestamp)
+            FROM page_views AS pv2
+            WHERE pv2.user_id = page_views.user_id
         )
     )
     ```
@@ -50,9 +50,9 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
 2. Count Conversions:
     ```sql
     conversions AS (
-    SELECT user_id, COUNT(*) AS num_purchases
-    FROM purchases
-    GROUP BY user_id
+        SELECT user_id, COUNT(*) AS num_purchases
+        FROM purchases
+        GROUP BY user_id
     )
     ```
 
@@ -73,11 +73,8 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
 In the output we have:
 
 - the page_version (A or B)
-- 
 - total_users in each group
-- 
 - converted_users (those who made a purchase)
-- 
 - conversion_rate (converted / total)
 
 ___ insert photo of the dataframe outputted
