@@ -125,6 +125,13 @@ plt.ylabel("Conversion Rate")
 plt.show()
 ```
 
+<iframe
+  src="test.html"
+  width="900"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ## Key Insights
 
 - Group A conversion rate: 0.316%
