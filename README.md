@@ -23,10 +23,10 @@ The workflow demonstrates an **end-to-end data analysis pipeline**: from databas
    - Ensured correct datatypes (e.g., text in quotes, timestamps as `TEXT` or `DATETIME`, numeric as `INTEGER`).  
 
 2. **Explore tables** in DB Browser:
-   ```sql
+    ```sql
    SELECT * FROM page_views LIMIT 5;
    SELECT * FROM purchases LIMIT 5;
-
+    ```
 ## Queries
 
 1. Assign Users to A/B Groups:
